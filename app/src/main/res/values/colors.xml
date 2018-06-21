@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="detailScoreHeadingBackgroundColor">#FF5300</color>
+    <color name="progressBarBackgroundColor">#f4bbbb</color>
+    <color name="progressBarProgressColor">#ff4081</color>
+    <color name="horizontal_line_color">#c0c0c0</color>
+    <color name="team1_accent_color">#67e46b</color>
+    <color name="team2_accent_color">#3b77cf</color>
+    <color name="team2_add_score_button_default_color">#c7c5c5</color>
+    <color name="team2_add_score_button_pressed_color">#f04575bc</color>
+    <color name="team1_add_score_button_default_color">#c7c5c5</color>
+    <color name="team1_add_score_button_pressed_color">#67e46b</color>
+    <color name="reset_button_default_color">#383636</color>
+    <color name="reset_button_pressed_color">#FF5300</color>
+</resources>

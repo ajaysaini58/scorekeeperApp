@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kabaddi Scorekeeper</string>
+    <string name="team_2_heading">Team 2</string>
+    <string name="team_1_heading_label">Team 1</string>
+    <string name="total_points_heading">Total Points</string>
+    <string name="default_total_score">0</string>
+    <string name="points_score_heading_text">Points Score</string>
+    <string name="default_detailed_score_numeric">0</string>
+    <string name="raid_point_add_score_button_label">+1</string>
+    <string name="raid_label_text">Raid</string>
+    <string name="reset_button_text">Reset Score</string>
+    <string name="all_out_heading_text">All out</string>
+    <string name="extra_heading_text">Extra</string>
+    <string name="tackle_heading_text">Tackle</string>
+    <string name="all_out_add_score_button_label">+2</string>
+    <string name="team1_won">Team 1 won!</string>
+    <string name="team2_won">Team 2 won!</string>
+    <string name="match_draw">Match draw</string>
+</resources>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_1_heading_label"
+                android:textSize="@dimen/team_name_heading"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/team_2_heading"
+                android:textSize="@dimen/team_name_heading"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!-- show horiontal line -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/horrizontal_line_height"
+            android:background="@color/horizontal_line_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/total_points_heading"
+            android:textSize="@dimen/total_point_text_size"
+            android:layout_marginTop="@dimen/ui_improve_layout_margin"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <!-- show total score of team 1 -->
+            <TextView
+                android:id="@+id/team1_total_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/total_score_sum_numeric"
+                android:text="@string/default_total_score"
+                android:textColor="@color/team1_accent_color"
+                android:layout_weight="1"/>
+
+            <!-- show total score of team 2 -->
+            <TextView
+                android:id="@+id/team2_total_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/total_score_sum_numeric"
+                android:text="@string/default_total_score"
+                android:textColor="@color/team2_accent_color"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/heading_line_height"
+            android:background="@color/horizontal_line_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/points_score_heading_text"
+            android:textSize="@dimen/point_score_heading_text"
+            android:layout_marginTop="@dimen/ui_improve_layout_margin"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ui_improve_layout_margin"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <!-- show raid score of team 1-->
+                <TextView
+                    android:id="@+id/team1_raid_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:textColor="@color/team1_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+
+                <!-- add raid score for team 1 -->
+                <Button
+                    android:id="@+id/team1_add_raid_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_score_margin"
+                    android:background="@drawable/team1_add_score_button_background"
+                    android:text="@string/raid_point_add_score_button_label"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/center_point_type_label_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/raid_label_text"
+                android:textSize="@dimen/center_point_label_text_size"
+                android:textStyle="bold"
+                android:background="@drawable/less_rounded_rectangle_shape"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_weight="1">
+
+                <!-- add raid score for team 2 -->
+                <Button
+                    android:id="@+id/team2_add_raid_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/add_score_margin"
+                    android:background="@drawable/team2_add_score_button_background"
+                    android:text="@string/raid_point_add_score_button_label"/>
+
+                <!-- show raid score for team 1-->
+                <TextView
+                    android:id="@+id/team2_raid_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:gravity="center"
+                    android:textColor="@color/team2_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- show raid progress for both teams -->
+        <ProgressBar
+            android:id="@+id/raid_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/progressBarBackgroundColor"
+            android:secondaryProgressTint="@color/team2_accent_color"
+            android:progressTint="@color/team1_accent_color" />
+
+        <View
+            android:layout_width="@dimen/vertical_center_bar_width"
+            android:layout_height="@dimen/vertical_center_bar_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_negative_margin"
+            android:background="@color/detailScoreHeadingBackgroundColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ui_improve_layout_margin"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/team1_tackle_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:textColor="@color/team1_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+                <Button
+                    android:id="@+id/team1_add_tackle_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_score_margin"
+                    android:background="@drawable/team1_add_score_button_background"
+                    android:text="@string/raid_point_add_score_button_label"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/center_point_type_label_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/less_rounded_rectangle_shape"
+                android:gravity="center"
+                android:text="@string/tackle_heading_text"
+                android:textSize="@dimen/center_point_label_text_size"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/team2_add_tackle_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/add_score_margin"
+                    android:background="@drawable/team2_add_score_button_background"
+                    android:text="@string/raid_point_add_score_button_label"/>
+                <TextView
+                    android:id="@+id/team2_tackle_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:gravity="center"
+                    android:textColor="@color/team2_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/tacke_score_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/progressBarBackgroundColor"
+            android:secondaryProgressTint="@color/team2_accent_color"
+            android:progressTint="@color/team1_accent_color" />
+        <View
+            android:layout_width="@dimen/vertical_center_bar_width"
+            android:layout_height="@dimen/vertical_center_bar_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_negative_margin"
+            android:background="@color/detailScoreHeadingBackgroundColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ui_improve_layout_margin"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/team1_extra_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:textColor="@color/team1_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+                <Button
+                    android:id="@+id/team1_add_extra_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_score_margin"
+                    android:background="@drawable/team1_add_score_button_background"
+                    android:text="@string/raid_point_add_score_button_label"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/center_point_type_label_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/less_rounded_rectangle_shape"
+                android:gravity="center"
+                android:text="@string/extra_heading_text"
+                android:textSize="@dimen/center_point_label_text_size"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/team2_add_extra_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/add_score_margin"
+                    android:background="@drawable/team2_add_score_button_background"
+                    android:text="@string/raid_point_add_score_button_label"/>
+                <TextView
+                    android:id="@+id/team2_extra_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:gravity="center"
+                    android:textColor="@color/team2_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/extra_score_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/progressBarBackgroundColor"
+            android:secondaryProgressTint="@color/team2_accent_color"
+            android:progressTint="@color/team1_accent_color" />
+        <View
+            android:layout_width="@dimen/vertical_center_bar_width"
+            android:layout_height="@dimen/vertical_center_bar_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_negative_margin"
+            android:background="@color/detailScoreHeadingBackgroundColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ui_improve_layout_margin"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/team1_all_out_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:textColor="@color/team1_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+
+                <Button
+                    android:id="@+id/team1_add_all_out_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/add_score_margin"
+                    android:background="@drawable/team1_add_score_button_background"
+                    android:text="@string/all_out_add_score_button_label" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/center_point_type_label_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/less_rounded_rectangle_shape"
+                android:gravity="center"
+                android:text="@string/all_out_heading_text"
+                android:textSize="@dimen/center_point_label_text_size"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/team2_add_all_out_score_button"
+                    android:layout_width="@dimen/add_score_button_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/add_score_margin"
+                    android:background="@drawable/team2_add_score_button_background"
+                    android:text="@string/all_out_add_score_button_label" />
+                <TextView
+                    android:id="@+id/team2_all_out_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detailed_score_text_size"
+                    android:gravity="center"
+                    android:textColor="@color/team2_accent_color"
+                    android:text="@string/default_detailed_score_numeric"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/all_out_score_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/progressBarBackgroundColor"
+            android:secondaryProgressTint="@color/team2_accent_color"
+            android:progressTint="@color/team1_accent_color" />
+        
+        <View
+            android:layout_width="@dimen/vertical_center_bar_width"
+            android:layout_height="@dimen/vertical_center_bar_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/view_negative_margin"
+            android:background="@color/detailScoreHeadingBackgroundColor" />
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/reset_score_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textColor="@android:color/white"
+            android:text="@string/reset_button_text"
+            android:background="@drawable/reset_button_background"/>
+
+    </LinearLayout>
+
+</ScrollView>
